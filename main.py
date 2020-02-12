@@ -23,7 +23,8 @@ z.close()
 def runCommand(i):
     arr = cmd_read()
     if i <= len(arr):
-        os.system("gnome-terminal -- bash -c '" + arr[i][1] + "; exec bash'")
+        os.system("gnome-terminal -t '" +
+                  arr[i][0] + "' -- bash -c '" + arr[i][1] + "; exec bash'")
     else:
         print("No command found at this position. check for available commands by using 'list'.")
 
