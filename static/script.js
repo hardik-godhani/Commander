@@ -20,9 +20,9 @@ var app = new Vue({
     methods: {
         runCommand: function (index) {
             fetch
-                (`http://localhost:5000/commands/456/run`)
+                (`http://localhost:5000/commands/${index}/run`)
                 .then(res => res.json())
-                .then(response => alert('Happy coding!'))
+                .then(response => null)
         },
     }
 })
